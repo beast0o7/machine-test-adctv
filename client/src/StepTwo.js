@@ -12,7 +12,7 @@ const StepTwo = ({ formData, setFormData, prevStep, nextStep }) => {
 
     const checkUser = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/api/users/check?email=${formData.email}&phoneNumber=${formData.phoneNumber}`);
+            const response = await axios.get(`https://machine-test-adctv.onrender.com/api/users/check?email=${formData.email}&phoneNumber=${formData.phoneNumber}`);
             return response;
         } catch (error) {
             // Handle error
@@ -22,7 +22,7 @@ const StepTwo = ({ formData, setFormData, prevStep, nextStep }) => {
 
     const saveUser = async () => {
         try {
-            const response = await axios.post('http://localhost:8000/api/users', formData);
+            const response = await axios.post('https://machine-test-adctv.onrender.com/api/users', formData);
             // Handle successful response
             console.log('User saved successfully', response.data);
         } catch (error) {

@@ -9,7 +9,7 @@ const StepOne = ({ formData, setFormData, nextStep }) => {
     
       const hitApi = async () => {
         try {
-          await axios.post('http://localhost:8000/api/logs');
+          await axios.post('https://machine-test-adctv.onrender.com/api/logs');
         } catch (error) {
           console.error('Error hitting API:', error);
         }

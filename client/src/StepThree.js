@@ -7,7 +7,7 @@ const StepThree = ({ formData, setFormData, prevStep, submitForm }) => {
 
   const saveAddress = async () => {
     try {
-        const response = await axios.post('http://localhost:8000/api/users/address', formData);
+        const response = await axios.post('https://machine-test-adctv.onrender.com/api/users/address', formData);
         // Handle successful response
         console.log('User saved successfully', response.data);
     } catch (error) {
